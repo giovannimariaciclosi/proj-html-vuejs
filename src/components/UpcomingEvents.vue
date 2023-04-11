@@ -24,7 +24,6 @@ export default {
   },
 }
 </script>
-Provident maxime soluta sapiente optio sint a, aut incidunt dolore laboriosam quo doloremque perferendis debitis odit illo error.
 <template>
   <div class="main-container">
     <div class="container">
