@@ -157,7 +157,7 @@ export default {
     bottom: 0;
     right: 0;
 
-    width: 35%;
+    width: 40%;
     max-height: 430px;
     background-color: white;
 
@@ -191,6 +191,7 @@ export default {
 
     .btn-group {
       width: 100%;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 
       button {
         border: 1px solid #a4d2c2;
