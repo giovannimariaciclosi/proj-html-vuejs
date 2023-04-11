@@ -4,6 +4,7 @@ import MeetTheAuthor from './components/MeetTheAuthor.vue';
 import Brands from './components/Brands.vue';
 import Audiobook from './components/Audiobook.vue';
 import Testimonials from './components/Testimonials.vue';
+import UpcomingEvents from './components/UpcomingEvents.vue';
 
 export default {
   data() {
@@ -16,7 +17,8 @@ export default {
     MeetTheAuthor,
     Brands,
     Audiobook,
-    Testimonials
+    Testimonials,
+    UpcomingEvents
   },
 }
 
@@ -28,6 +30,7 @@ export default {
   <Brands></Brands>
   <Audiobook></Audiobook>
   <Testimonials></Testimonials>
+  <UpcomingEvents></UpcomingEvents>
 </template>
 
 <style lang="scss" scoped></style>
