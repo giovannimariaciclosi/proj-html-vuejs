@@ -8,7 +8,7 @@ export default {
         {
           title: "New Audiobook",
           subtitle: "NO TIME TO READ? NO PROBLEM. LISTEN TO IT",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.",
           images: [
             {
               path: "audible-logo.png",
@@ -55,18 +55,53 @@ export default {
   background-position: center;
 
   .container {
-    padding-top: 2em;
+    padding-top: 4em;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 100px;
 
     .phone-photo {
       max-width: 400px;
     }
 
     .right-section {
-      max-width: 30%;
+      max-width: 33%;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .title {
+        color: white;
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      .subtitle {
+        color: #f4b429;
+        font-size: .9em;
+        font-weight: 500;
+      }
+
+      .text {
+        color: #c6c4c4;
+        font-size: .9em;
+      }
+
+      .img-container {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100px;
+        }
+      }
     }
   }
 }

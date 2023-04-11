@@ -44,7 +44,7 @@ export default {
     <div class="latest-book-release">
       <div class="info-container">
         <div class="left-section">
-          <img src="../../public/img/book-widget.png" alt="Latest Book">
+          <img class="latest-book" src="../../public/img/book-widget.png" alt="Latest Book">
         </div>
         <div class="right-section">
           <div class="info">Latest Book Release</div>
@@ -157,16 +157,24 @@ export default {
     bottom: 0;
     right: 0;
 
-    width: 40%;
-    max-height: 430px;
+    width: 550px;
+    // max-height: 430px;
     background-color: white;
 
-    padding: 2em;
+    padding: 2em 4em;
     z-index: 2;
 
     .info-container {
       display: flex;
       align-items: center;
+
+      .left-section {
+        min-width: 220px;
+
+        img {
+          width: 100%;
+        }
+      }
 
       .right-section {
         display: flex;
@@ -175,16 +183,18 @@ export default {
 
         .info {
           font-weight: bold;
-          font-size: 1.3em;
+          font-size: 1.1em;
         }
 
         .title {
           color: #f4b429;
-          font-weight: bold;
+          // font-weight: bold;
+          font-size: .9em;
         }
 
         .text {
           color: #333333;
+          font-size: .9em;
         }
       }
     }
@@ -290,6 +300,5 @@ export default {
       }
     }
   }
-
 }
 </style>
