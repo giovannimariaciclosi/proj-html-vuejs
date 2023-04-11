@@ -158,7 +158,7 @@ export default {
     right: 0;
 
     width: 35%;
-    max-height: 400px;
+    max-height: 430px;
     background-color: white;
 
     padding: 2em;

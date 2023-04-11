@@ -1,5 +1,6 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
+import MeetTheAuthor from './components/MeetTheAuthor.vue';
 
 export default {
   data() {
@@ -9,6 +10,7 @@ export default {
 
   components: {
     AppHeader,
+    MeetTheAuthor
   },
 }
 
@@ -16,6 +18,7 @@ export default {
 
 <template>
   <AppHeader></AppHeader>
+  <MeetTheAuthor></MeetTheAuthor>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped></style>
