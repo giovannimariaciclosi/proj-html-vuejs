@@ -7,6 +7,7 @@ import Testimonials from './components/Testimonials.vue';
 import UpcomingEvents from './components/UpcomingEvents.vue';
 import Newsletter from './components/Newsletter.vue';
 import MoreAboutAuthor from './components/MoreAboutAuthor.vue';
+import RecentArticles from './components/RecentArticles.vue';
 
 export default {
   data() {
@@ -22,7 +23,8 @@ export default {
     Testimonials,
     UpcomingEvents,
     Newsletter,
-    MoreAboutAuthor
+    MoreAboutAuthor,
+    RecentArticles
   },
 }
 
@@ -37,6 +39,7 @@ export default {
   <UpcomingEvents></UpcomingEvents>
   <Newsletter></Newsletter>
   <MoreAboutAuthor></MoreAboutAuthor>
+  <RecentArticles></RecentArticles>
 </template>
 
 <style lang="scss" scoped></style>
