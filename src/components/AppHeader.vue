@@ -252,6 +252,7 @@ export default {
       font-weight: bold;
 
       li {
+        cursor: pointer;
         padding: 2em 0;
       }
     }
