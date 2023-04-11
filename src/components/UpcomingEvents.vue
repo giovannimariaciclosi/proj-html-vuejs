@@ -68,10 +68,11 @@ export default {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-      gap: 20px;
+      gap: 30px;
 
       .card {
-        width: calc(100% / 3 - 20px * 2);
+        width: calc(100% / 3 - 30px);
+        border: transparent;
 
         display: flex;
         flex-direction: column;

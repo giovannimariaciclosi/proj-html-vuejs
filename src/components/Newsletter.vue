@@ -42,7 +42,8 @@ export default {
     .subtitle {
       padding-top: 1em;
       color: #f4b429;
-      font-size: 1em;
+      font-size: .9em;
+      font-weight: 500;
     }
 
     .input-container {
