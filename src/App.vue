@@ -2,6 +2,7 @@
 import AppHeader from './components/AppHeader.vue';
 import MeetTheAuthor from './components/MeetTheAuthor.vue';
 import Brands from './components/Brands.vue';
+import Audiobook from './components/Audiobook.vue';
 
 export default {
   data() {
@@ -12,7 +13,8 @@ export default {
   components: {
     AppHeader,
     MeetTheAuthor,
-    Brands
+    Brands,
+    Audiobook,
   },
 }
 
@@ -22,6 +24,7 @@ export default {
   <AppHeader></AppHeader>
   <MeetTheAuthor></MeetTheAuthor>
   <Brands></Brands>
+  <Audiobook></Audiobook>
 </template>
 
 <style lang="scss" scoped></style>

@@ -26,8 +26,7 @@ export default {
 <style lang="scss" scoped>
 .container {
   text-align: center;
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding: 4em 4em;
 
   .title {
     font-family: 'Kristi', cursive;
@@ -37,7 +36,7 @@ export default {
   }
 
   .text {
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
 
   .btn-green {
