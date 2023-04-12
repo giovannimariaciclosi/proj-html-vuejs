@@ -78,6 +78,9 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        cursor: pointer;
+
+        transition: box-shadow .25s ease;
 
         .card-inner {
           padding: 1.3em;
@@ -90,6 +93,18 @@ export default {
             @include text-small;
             color: $dark-grey;
           }
+        }
+
+        img {
+          transition: opacity .25s ease;
+        }
+
+        &:hover {
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.205);
+        }
+
+        &:hover img {
+          opacity: .6;
         }
       }
     }

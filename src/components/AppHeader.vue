@@ -139,6 +139,7 @@ export default {
       background-color: white;
       border-radius: 8px;
       color: $blue;
+      cursor: pointer;
 
       .fa-solid {
         font-size: 1.6em;
@@ -263,6 +264,35 @@ export default {
       li {
         cursor: pointer;
         padding: 2em 0;
+        position: relative;
+
+        &:hover {
+
+          color: $orange;
+
+          &::before {
+
+            content: '';
+            width: 100%;
+            height: 6px;
+            background-color: $orange;
+            position: absolute;
+            top: 0;
+          }
+        }
+      }
+
+      li.active {
+        color: $orange;
+      }
+
+      li.active::before {
+        content: '';
+        width: 100%;
+        height: 6px;
+        background-color: $orange;
+        position: absolute;
+        top: 0;
       }
     }
   }
