@@ -100,7 +100,7 @@ export default {
         }
 
         &:hover {
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.205);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
 
         &:hover img {

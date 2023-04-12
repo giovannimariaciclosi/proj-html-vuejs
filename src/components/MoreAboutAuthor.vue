@@ -74,6 +74,15 @@ export default {
       position: relative;
       overflow: hidden;
       border-bottom-right-radius: 10%;
+      cursor: pointer;
+
+      transition: box-shadow .4s ease;
+      transition: transform .4s ease;
+
+      &:hover {
+        box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+        transform: scale(1.05);
+      }
 
       .background {
         height: 100%;
@@ -86,6 +95,7 @@ export default {
 
       img {
         height: 100%;
+
       }
 
       .card-inner {
