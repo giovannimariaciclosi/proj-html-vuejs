@@ -72,9 +72,11 @@ export default {
         <div class="bottom-right">
           <div v-for="article in articleShort" class="card">
             <img :src="'../../public/img/' + article.image" :alt="article.title">
-            <div class="title">{{ article.title }}</div>
-            <span class="text-grey">{{ article.infos.date }} | <span class="text-black">{{ article.infos.comments
-            }}</span> Comments</span>
+            <div class="text-container">
+              <div class="title">{{ article.title }}</div>
+              <span class="text-grey">{{ article.infos.date }} | <span class="text-black">{{ article.infos.comments
+              }}</span> Comments</span>
+            </div>
           </div>
         </div>
         <!-- /bottom right -->
@@ -137,6 +139,7 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 2em;
+        cursor: pointer;
 
         img {
           width: 100%;
@@ -177,20 +180,38 @@ export default {
 
         .card {
           border: transparent;
+          cursor: pointer;
 
-          .title {
-            font-size: 1.3em;
-            font-weight: 500;
-            padding-bottom: .1em;
-            padding-top: .5em;
+          &:hover .text-container {
+            opacity: 0;
           }
 
-          .text-grey {
-            font-size: .9em;
-            color: $dark-grey;
+          &:hover img {
+            transform: scale(1.12);
+          }
 
-            .text-black {
-              color: black;
+          img {
+            transition: transform .3s ease;
+
+          }
+
+          .text-container {
+            transition: opacity .2s linear;
+
+            .title {
+              font-size: 1.3em;
+              font-weight: 500;
+              padding-bottom: .1em;
+              padding-top: .5em;
+            }
+
+            .text-grey {
+              font-size: .9em;
+              color: $dark-grey;
+
+              .text-black {
+                color: black;
+              }
             }
           }
         }
