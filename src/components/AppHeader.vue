@@ -1,28 +1,51 @@
 <script>
 
+import { store } from "../store";
+
+
 export default {
   name: "AppHeader",
   data() {
     return {
 
-      // link della navbar
-      navList: [
-        "Home",
-        "About Me",
-        "Testimonials",
-        "My Blog",
-        "Meetups",
-        "Shop",
-        "Contact Me"
-      ],
+      store,
 
       //elemento on sale in position absolute
       saleInfo: {
         currency: "$",
         price: 39,
         status: "On Sale"
-      }
+      },
     };
+  },
+
+  methods: {
+    changeActive(index) {
+      for (let i = 0; i < this.store.navList.length; i++) {
+        this.store.navList[i].active = false;
+      };
+
+      this.store.navList[index].active = true;
+    },
+
+    nextSlide() {
+      if (store.activeSlideIndex < store.slides.length - 1) {
+        store.activeSlideIndex++;
+      } else {
+        store.activeSlideIndex = 0;
+      }
+      console.log(store.activeSlideIndex);
+    },
+
+    prevSlide() {
+      if (store.activeSlideIndex == 0) {
+        store.activeSlideIndex = store.slides.length - 1;
+      } else {
+        store.activeSlideIndex--;
+      }
+      console.log(store.activeSlideIndex);
+    },
+
   },
 }
 
@@ -80,22 +103,25 @@ export default {
 
     <div class="container">
       <img class="logo" src="../../public/img/author-logo-round.png" alt="Logo">
-      <ul class="link-list">
-        <!-- ciclo for per i link della navbar -->
-        <li v-for="link in navList">{{ link }}</li>
-        <li><i class="fa-solid fa-cart-shopping"></i></li>
-      </ul>
+      <div class="link-container">
+        <ul class="link-list">
+          <!-- ciclo i link della navbar e al click di uno di essi gli assegno la classe active -->
+          <li v-for="(link, index) in store.navList" @click="changeActive(index)"
+            :class="link.active == true ? 'active' : ''">{{
+              link.text }}
+          </li>
+        </ul>
+        <i class=" fa-solid fa-cart-shopping"></i>
+      </div>
 
       <div class="container">
         <div class="author-card">
           <h1 class="title">Damon Vaughn</h1>
-          <div class="text">Best-selling author and the most influential public intellectual in the western world right
-            now.
-          </div>
-          <div class="author"><i> - The New York Times</i></div>
+          <div class="text">{{ store.slides[store.activeSlideIndex].title }}</div>
+          <div class="author"><i>- {{ store.slides[store.activeSlideIndex].source }}</i></div>
           <div class="slider">
-            <i class="fa-solid fa-arrow-left"></i>
-            <i class="fa-solid fa-arrow-right"></i>
+            <i @click="prevSlide()" class="fa-solid fa-arrow-left"></i>
+            <i @click="nextSlide()" class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
       </div>
@@ -252,47 +278,65 @@ export default {
       left: -50px;
     }
 
-    .link-list {
+    .link-container {
       display: flex;
       justify-content: flex-end;
-      flex-wrap: wrap;
       gap: 25px;
-
+      align-items: center;
+      flex-wrap: wrap;
       color: white;
-      font-weight: 500;
 
-      li {
+      .fa-cart-shopping {
         cursor: pointer;
-        padding: 2em 0;
-        position: relative;
 
         &:hover {
-
           color: $orange;
-
-          &::before {
-
-            content: '';
-            width: 100%;
-            height: 6px;
-            background-color: $orange;
-            position: absolute;
-            top: 0;
-          }
         }
       }
 
-      li.active {
-        color: $orange;
-      }
+      .link-list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 25px;
 
-      li.active::before {
-        content: '';
-        width: 100%;
-        height: 6px;
-        background-color: $orange;
-        position: absolute;
-        top: 0;
+        font-weight: 500;
+        margin: 0;
+
+        li {
+          cursor: pointer;
+          padding: 2em 0;
+          position: relative;
+
+          &:hover {
+
+            color: $orange;
+
+            &::before {
+
+              content: '';
+              width: 100%;
+              height: 6px;
+              background-color: $orange;
+              position: absolute;
+              top: 0;
+            }
+          }
+        }
+
+        li.active {
+          color: $orange;
+        }
+
+        li.active::before {
+          content: '';
+          width: 100%;
+          height: 6px;
+          background-color: $orange;
+          position: absolute;
+          top: 0;
+        }
       }
     }
   }
