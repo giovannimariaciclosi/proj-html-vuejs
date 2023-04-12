@@ -46,9 +46,9 @@ export default {
     <!-- testimonial top -->
     <div class="testimonial-top">
       <div class="top-left">
-        <div class="title">
+        <h2 class="title">
           What The Critics Say
-        </div>
+        </h2>
         <div class="subtitle">
           TESTIMONIALS FROM AROUND THE WORLD
         </div>
@@ -99,6 +99,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// file scss con le variabili
+@use "../variable" as *;
+
 .container {
   padding: 4em 4em;
 
@@ -111,31 +114,19 @@ export default {
     .top-left {
 
       .title {
-        font-size: 1.6em;
-        font-weight: bold;
+        @include text-dm-serif-display-medium;
+        padding-bottom: .5em
       }
 
       .subtitle {
-        font-size: .9em;
-        color: #49a987;
+        @include green-text;
       }
     }
 
     .top-right {
       .btn-orange {
+        @include btn-orange;
         padding: .6em 2.5em;
-        background-color: #f4b429;
-        border: transparent;
-        border-radius: 5px;
-        font-weight: 500;
-        font-size: .9em;
-        cursor: pointer;
-
-        transition: background-color .3s ease;
-
-        &:hover {
-          background-color: #f4a700;
-        }
       }
     }
   }
@@ -166,8 +157,7 @@ export default {
       border-bottom-right-radius: 15%;
 
       .title {
-        font-size: 2em;
-        font-weight: 500;
+        @include text-dm-serif-display-big;
       }
 
       .subtitle {
@@ -183,7 +173,7 @@ export default {
         }
 
         .author-newspaper {
-          color: #49a987;
+          color: $green;
           padding-left: .2em;
         }
       }
@@ -202,19 +192,18 @@ export default {
       .testimonial-card {
 
         .card-top {
-          background-color: #fef7e9;
+          background-color: $cream;
           padding: 3em 2em;
           text-align: center;
 
           .title {
-            font-size: 1.2em;
-            font-weight: bold;
+            @include text-dm-serif-display-small;
             padding-bottom: .5em;
           }
 
           .text {
-            font-size: .9em;
-            color: #7a766d;
+            @include text-small;
+            color: $grey-on-cream;
           }
         }
 
@@ -227,15 +216,13 @@ export default {
 
           .author-name {
             font-weight: 500;
-            color: #7a766d;
+            color: $grey-on-cream;
 
           }
 
           .author-newspaper {
             padding-left: .2em;
           }
-
-
         }
       }
     }

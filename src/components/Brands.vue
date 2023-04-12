@@ -39,8 +39,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// file scss con le variabili
+@use "../variable" as *;
+
 .main-container {
-  background-color: #fef7e9;
+  background-color: $cream;
 
   .container {
     display: flex;

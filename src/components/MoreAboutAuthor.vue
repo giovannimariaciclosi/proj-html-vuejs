@@ -26,7 +26,7 @@ export default {
 </script>
 <template>
   <div class="container">
-    <div class="title">Dig A Little Deeper Into Damon Vaughn</div>
+    <h2 class="title">Dig A Little Deeper Into Damon Vaughn</h2>
     <div class="subtitle">FIND OUT MORE ABOUT THE AUTHOR HIMSELF</div>
     <div class="cards-container">
       <div v-for="card in cards" class="cards">
@@ -43,20 +43,20 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// file scss con le variabili
+@use "../variable" as *;
+
 .container {
   padding: 4em;
   text-align: center;
 
   .title {
-    font-size: 1.6em;
-    font-weight: bold;
+    @include text-dm-serif-display-medium;
   }
 
   .subtitle {
+    @include green-text;
     padding-top: 0.5em;
-    color: #49a987;
-    font-size: 0.9em;
-    font-weight: 500;
   }
 
   .cards-container {
@@ -107,8 +107,8 @@ export default {
         }
 
         .card-text {
-          color: #f4b429;
-          font-size: .9em;
+          @include orange-text;
+          font-weight: 400;
         }
       }
     }

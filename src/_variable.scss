@@ -1,0 +1,82 @@
+$orange: #f4b429;
+$green: #49a987;
+$blue: #33475b;
+$cream: #fef7e9;
+$light-grey: #c6c4c4;
+$dark-grey: #333333;
+$grey-on-cream: #7a766d;
+
+@mixin title-kristi {
+  font-family: "Kristi", cursive;
+  color: $orange;
+  font-size: 5em;
+  margin: 0;
+}
+
+@mixin text-dm-serif-display-big {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2em;
+}
+
+@mixin text-dm-serif-display-medium {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.7em;
+  margin: 0;
+}
+
+@mixin text-dm-serif-display-small {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.3em;
+}
+
+@mixin text-small {
+  font-size: 0.9em;
+}
+
+@mixin orange-text {
+  color: $orange;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+@mixin green-text {
+  color: $green;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+
+@mixin btn-green {
+  padding: .6em 1.8em;
+  background-color: $green;
+  color: white;
+  border: transparent;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: background-color .3s ease;
+
+  &:hover {
+    background-color: #357f60;
+  }
+}
+
+@mixin btn-orange {
+  padding: .6em 1.8em;
+  background-color: $orange;
+  color: white;
+  border: transparent;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: background-color .3s ease;
+
+  &:hover {
+    background-color: #357f60;
+  }
+}
+

@@ -43,7 +43,7 @@ export default {
       <!-- articles top -->
       <div class="articles-top">
         <div class="top-right">
-          <div class="title">Recent Articles</div>
+          <h2 class="title">Recent Articles</h2>
           <div class="subtitle">READ THE LATEST ENTRIES</div>
         </div>
         <div class="top-left">
@@ -85,8 +85,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../variable" as *;
+
 .main-container {
-  background-color: #fef7e9;
+  background-color: $cream;
 
   .container {
     padding: 4em;
@@ -100,35 +102,20 @@ export default {
       .top-right {
 
         .title {
-          font-size: 1.6em;
-          font-weight: bold;
+          @include text-dm-serif-display-medium;
         }
 
         .subtitle {
+          @include green-text;
           padding-top: 0.5em;
-          color: #49a987;
-          font-size: 0.9em;
-          font-weight: 500;
         }
       }
 
       .top-left {
 
         .btn-orange {
+          @include btn-orange;
           padding: .6em 4em;
-          background-color: #f4b429;
-          border: transparent;
-          border-radius: 5px;
-          font-weight: 500;
-          font-size: .9em;
-          cursor: pointer;
-          color: white;
-
-          transition: background-color .3s ease;
-
-          &:hover {
-            background-color: #f4a700;
-          }
         }
       }
     }
@@ -164,7 +151,7 @@ export default {
 
           .text-grey {
             font-size: .9em;
-            color: #333333;
+            color: $dark-grey;
 
             .text-black {
               color: black;
@@ -173,7 +160,7 @@ export default {
         }
 
         .subtitle {
-          color: #333333;
+          color: $dark-grey;
         }
       }
 
@@ -200,7 +187,7 @@ export default {
 
           .text-grey {
             font-size: .9em;
-            color: #333333;
+            color: $dark-grey;
 
             .text-black {
               color: black;

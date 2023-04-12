@@ -27,7 +27,7 @@ export default {
 <template>
   <div class="main-container">
     <div class="container">
-      <div class="title">Upcoming Events</div>
+      <h2 class="title">Upcoming Events</h2>
       <div class="subtitle">MEET THE AUTHOR IN PERSON</div>
 
       <div class="card-container">
@@ -45,22 +45,23 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// file scss con le variabili
+@use "../variable" as *;
+
 .main-container {
-  background-color: #fef7e9;
+  background-color: $cream;
 
   .container {
     padding: 4em 1em;
     text-align: center;
 
     .title {
-      font-size: 1.6em;
-      font-weight: bold;
+      @include text-dm-serif-display-medium;
     }
 
     .subtitle {
+      @include orange-text;
       padding-top: .5em;
-      color: #f4b429;
-      font-size: .9em;
     }
 
     .card-container {
@@ -86,8 +87,8 @@ export default {
           }
 
           .card-subtitle {
-            color: #333333;
-            font-size: .9em;
+            @include text-small;
+            color: $dark-grey;
           }
         }
       }

@@ -11,7 +11,7 @@ export default {
 <template>
   <div class="main-container">
     <div class="container">
-      <div class="title">Subscribe To My<br>Newsletter</div>
+      <h2 class="title">Subscribe To My<br>Newsletter</h2>
       <div class="subtitle">BE NOTIFIED ABOUT BOOK SIGNING TOUR DATES</div>
       <div class="input-container">
         <input type="text" placeholder="Insert your email...*">
@@ -23,6 +23,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// file scss con le variabili
+@use "../variable" as *;
+
 .main-container {
   background-image: url('../../public/img/banner-2.jpg');
   background-size: cover;
@@ -34,16 +37,13 @@ export default {
     width: 35%;
 
     .title {
-      font-size: 1.6em;
-      font-weight: bold;
+      @include text-dm-serif-display-medium;
       color: white;
     }
 
     .subtitle {
+      @include orange-text;
       padding-top: 1em;
-      color: #f4b429;
-      font-size: .9em;
-      font-weight: 500;
     }
 
     .input-container {
@@ -61,24 +61,13 @@ export default {
       }
 
       .btn-green {
-        padding: .6em 1.8em;
-        background-color: #49a987;
-        border: transparent;
-        border-radius: 5px;
-        font-weight: 500;
-        cursor: pointer;
-
-        transition: background-color .3s ease;
-
-        &:hover {
-          background-color: #357f60;
-        }
+        @include btn-green;
       }
     }
 
     .text {
-      color: #c6c4c4;
-      font-size: 0.9em;
+      @include text-small;
+      color: $light-grey;
     }
   }
 }

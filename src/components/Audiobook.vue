@@ -36,7 +36,7 @@ export default {
     <div class="container">
       <img class="phone-photo" src="../../public/img/audible-app-2x.png" alt="Audible app photo">
       <div class="right-section">
-        <div class="title">{{ info[0].title }}</div>
+        <h2 class="title">{{ info[0].title }}</h2>
         <div class="subtitle">{{ info[0].subtitle }}</div>
         <div class="text">{{ info[0].text }}</div>
         <div class="img-container">
@@ -49,6 +49,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// file scss con le variabili
+@use "../variable" as *;
+
 .main-container {
   background-image: url('../../public/img/banner.jpg');
   background-size: cover;
@@ -75,20 +78,17 @@ export default {
       gap: 15px;
 
       .title {
+        @include text-dm-serif-display-medium;
         color: white;
-        font-size: 1.5em;
-        font-weight: bold;
       }
 
       .subtitle {
-        color: #f4b429;
-        font-size: .9em;
-        font-weight: 500;
+        @include orange-text;
       }
 
       .text {
-        color: #c6c4c4;
-        font-size: .9em;
+        @include text-small;
+        color: $light-grey;
       }
 
       .img-container {

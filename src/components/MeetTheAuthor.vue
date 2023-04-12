@@ -1,6 +1,5 @@
 <script>
 
-
 export default {
   name: "MeetTheAuthor",
   data() {
@@ -17,22 +16,22 @@ export default {
 
 <template>
   <div class="container">
-    <div class="title">{{ info.title }}</div>
+    <h2 class="title">{{ info.title }}</h2>
     <div class="text">{{ info.text }}</div>
     <button class="btn-green">Meet The Author</button>
   </div>
 </template>
 
 <style lang="scss" scoped>
+// file scss con le variabili
+@use "../variable" as *;
+
 .container {
   text-align: center;
   padding: 4em 4em;
 
   .title {
-    font-family: 'Kristi', cursive;
-    color: #f4b429;
-    font-size: 5em;
-    margin: 0;
+    @include title-kristi;
   }
 
   .text {
@@ -40,20 +39,8 @@ export default {
   }
 
   .btn-green {
-    padding: .6em 1.8em;
-    background-color: #49a987;
-    border: transparent;
-    border-radius: 5px;
-    font-weight: 500;
-    cursor: pointer;
-
+    @include btn-green;
     margin-top: 3em;
-
-    transition: background-color .3s ease;
-
-    &:hover {
-      background-color: #357f60;
-    }
   }
 }
 </style>

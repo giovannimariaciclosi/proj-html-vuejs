@@ -15,6 +15,13 @@ export default {
         "Shop",
         "Contact Me"
       ],
+
+      //elemento on sale in position absolute
+      saleInfo: {
+        currency: "$",
+        price: 39,
+        status: "On Sale"
+      }
     };
   },
 }
@@ -31,9 +38,9 @@ export default {
         <span class="status">Demos</span>
       </div>
       <div class="on-sale">
-        <span class="dollar">$</span>
-        <span class="price">39</span>
-        <span class="status">On Sale</span>
+        <span class="currency">{{ saleInfo.currency }}</span>
+        <span class="price">{{ saleInfo.price }}</span>
+        <span class="status">{{ saleInfo.status }}</span>
       </div>
     </div>
     <!-- /elementi position absolute demos e on sale -->
@@ -54,6 +61,7 @@ export default {
         </div>
       </div>
 
+      <!-- bootstrap button group -->
       <div class="btn-group">
         <button type="button" class="btn">
           <i class="fa-brands fa-amazon"></i>
@@ -64,6 +72,8 @@ export default {
           <span>Buy On AppStore</span>
         </button>
       </div>
+      <!-- /bootstrap button group -->
+
     </div>
     <!-- /elemento position absolute latest book release -->
 
@@ -94,6 +104,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// file scss con le variabili
+@use "../variable" as *;
+
 .header-container {
   position: relative;
   // aggiungo immagine di sfondo con linear gradient dall'alto verso il basso
@@ -125,23 +138,23 @@ export default {
 
       background-color: white;
       border-radius: 8px;
-      color: #33475b;
+      color: $blue;
 
       .fa-solid {
         font-size: 1.6em;
         padding-bottom: 10px;
       }
 
-      .dollar {
+      .currency {
         position: absolute;
         top: 4px;
         left: 8px;
-        color: #49a987;
+        color: $green;
       }
 
       .price {
         font-size: 1.8em;
-        color: #49a987;
+        color: $green;
       }
 
       .status {
@@ -158,7 +171,6 @@ export default {
     right: 0;
 
     width: 550px;
-    // max-height: 430px;
     background-color: white;
 
     padding: 2em 4em;
@@ -182,19 +194,16 @@ export default {
         gap: 10px;
 
         .info {
-          font-weight: bold;
-          font-size: 1.1em;
+          @include text-dm-serif-display-small;
         }
 
         .title {
-          color: #f4b429;
-          // font-weight: bold;
-          font-size: .9em;
+          @include orange-text;
         }
 
         .text {
-          color: #333333;
-          font-size: .9em;
+          @include text-small;
+          color: $dark-grey;
         }
       }
     }
@@ -214,7 +223,7 @@ export default {
         }
 
         &:hover {
-          border: 1px solid #49a987;
+          border: 1px solid $green;
         }
       }
     }
@@ -227,7 +236,7 @@ export default {
         padding: .5em 2em;
         background-color: transparent;
         color: black;
-        border: 1px solid #49a987;
+        border: 1px solid $green;
       }
     }
   }
@@ -249,7 +258,7 @@ export default {
       gap: 25px;
 
       color: white;
-      font-weight: bold;
+      font-weight: 500;
 
       li {
         cursor: pointer;
@@ -269,20 +278,16 @@ export default {
     padding-bottom: 8em;
 
     .title {
-      font-family: 'Kristi', cursive;
-      color: #f4b429;
-      font-size: 5em;
-      margin: 0;
+      @include title-kristi;
     }
 
     .text {
+      @include text-dm-serif-display-big;
       color: white;
-      font-size: 2em;
-      font-weight: bold;
     }
 
     .author {
-      color: #c6c4c4;
+      color: $light-grey;
       font-size: 1.2em;
     }
 
@@ -298,6 +303,13 @@ export default {
         padding: 15px 15.8px;
         background-color: #0a0a0ad8;
         border-radius: 2px;
+        cursor: pointer;
+
+        transition: opacity .1s ease;
+
+        &:hover {
+          opacity: .5;
+        }
       }
     }
   }

@@ -8,6 +8,7 @@ import UpcomingEvents from './components/UpcomingEvents.vue';
 import Newsletter from './components/Newsletter.vue';
 import MoreAboutAuthor from './components/MoreAboutAuthor.vue';
 import RecentArticles from './components/RecentArticles.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
   data() {
@@ -24,7 +25,8 @@ export default {
     UpcomingEvents,
     Newsletter,
     MoreAboutAuthor,
-    RecentArticles
+    RecentArticles,
+    AppFooter
   },
 }
 
@@ -40,6 +42,7 @@ export default {
   <Newsletter></Newsletter>
   <MoreAboutAuthor></MoreAboutAuthor>
   <RecentArticles></RecentArticles>
+  <AppFooter></AppFooter>
 </template>
 
 <style lang="scss" scoped></style>
