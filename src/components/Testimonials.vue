@@ -155,6 +155,14 @@ export default {
 
       color: white;
       border-bottom-right-radius: 15%;
+      cursor: pointer;
+
+      transition: all .3s linear;
+
+      &:hover {
+        box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+        transform: scale(1.03);
+      }
 
       .title {
         @include text-dm-serif-display-big;
@@ -195,6 +203,13 @@ export default {
           background-color: $cream;
           padding: 3em 2em;
           text-align: center;
+          cursor: pointer;
+          transition: all .3s linear;
+
+          &:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            transform: scale(1.03);
+          }
 
           .title {
             @include text-dm-serif-display-small;

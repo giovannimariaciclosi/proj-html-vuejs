@@ -175,6 +175,14 @@ export default {
           align-items: center;
           gap: 1em;
           padding-top: .5em;
+
+          a {
+            transition: opacity .1s linear;
+
+            &:hover {
+              opacity: .3;
+            }
+          }
         }
 
       }

@@ -80,7 +80,7 @@ export default {
         gap: 10px;
         cursor: pointer;
 
-        transition: box-shadow .25s ease;
+        transition: box-shadow .25s linear;
 
         .card-inner {
           padding: 1.3em;
@@ -96,7 +96,7 @@ export default {
         }
 
         img {
-          transition: opacity .25s ease;
+          transition: opacity .25s linear;
         }
 
         &:hover {

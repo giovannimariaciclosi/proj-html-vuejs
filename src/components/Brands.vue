@@ -55,6 +55,7 @@ export default {
     .brands {
       max-width: 200px;
       padding: 3em 0;
+      cursor: pointer;
     }
   }
 }

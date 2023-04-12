@@ -76,8 +76,7 @@ export default {
       border-bottom-right-radius: 10%;
       cursor: pointer;
 
-      transition: box-shadow .4s ease;
-      transition: transform .4s ease;
+      transition: all .4s linear;
 
       &:hover {
         box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);

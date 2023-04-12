@@ -100,6 +100,7 @@ export default {
 
         img {
           width: 100px;
+          cursor: pointer;
         }
       }
     }
